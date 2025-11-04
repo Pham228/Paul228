@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul Pham — Resume</title>
+  <link rel="icon" type="image/png" href="images/redbulllogo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    :root{
+      --resume-max: 960px;
+      --resume-gap: 1rem;
+      --resume-muted: rgba(255,255,255,.7);
+      --resume-card: rgba(255,255,255,.06);
+      --resume-border: rgba(255,255,255,.18);
+    }
+
+    .resume-wrap{max-width:var(--resume-max);margin:2rem auto;padding:0 1rem}
+    .resume-header{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:flex-start;gap:1rem;margin-bottom:1rem}
+    .resume-title{flex:1;}
+    .resume-title h1{font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1.1;margin:0;text-align:left}
+    .resume-title small{display:block;margin-top:.35rem;opacity:.9;text-align:left}
+    .resume-contact{font-style:normal;text-align:right}
+    .resume-contact a{color:inherit;text-decoration:underline}
+
+    .resume-actions{position:sticky;top:0;z-index:5;backdrop-filter:saturate(150%) blur(6px);display:flex;gap:.5rem;padding:.75rem 0;margin-bottom:.75rem}
+    .resume-actions .btn{appearance:none;border:1px solid var(--resume-border);background:var(--resume-card);padding:.6rem .9rem;border-radius:.75rem;cursor:pointer;text-decoration:none;color:inherit;font-weight:600;transition:transform .04s ease}
+    .resume-actions .btn:hover{transform:translateY(-1px)}
+
+    .resume{display:grid;grid-template-columns:1fr;gap:var(--resume-gap)}
+    @media(min-width:880px){.resume{grid-template-columns: 0.65fr 1fr;}}
+
+    .resume-section{border:1px solid var(--resume-border);background:var(--resume-card);border-radius:1rem;padding:1rem}
+    .resume-section h2{font-size:1.05rem;letter-spacing:.02em;margin-bottom:.6rem;opacity:.95}
+
+    .item{margin-bottom:.85rem}
+    .item:last-child{margin-bottom:0}
+    .item-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.4rem .75rem}
+    .item-head .role{font-weight:700}
+    .item-head .org{opacity:.95}
+    .item-head .meta{opacity:.75}
+    .bullets{margin:.4rem 0 0 1.1rem}
+    .bullets li{margin:.25rem 0}
+
+    .tagline{opacity:.8;margin-top:.35rem}
+    .tag{display:inline-block;border:1px solid var(--resume-border);background:var(--resume-card);padding:.2rem .5rem;border-radius:.5rem;font-size:.85rem;margin:.15rem .3rem .15rem 0}
+
+    @media print{
+      nav, footer, .resume-actions{display:none!important}
+      body{background:#fff;color:#000}
+      .resume-section{border:0;background:#fff;padding:.25in}
+      .resume-wrap{max-width:7.5in;margin:0;padding:0}
+    }
+  </style>
+</head>
+<body>
+  <!-- Shared site nav -->
+  <nav>
+    <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="game.html">Clanker Crushers</a></li>
+    </ul>
+  </nav>
+
+  <main class="resume-wrap">
+    <!-- Sticky action bar -->
+    <div class="resume-actions">
+      <!-- 1) PDF download: put your PDF at /assets/ and update the href -->
+      <a class="btn" href="assets/Resume - Pham Paul.docx.pdf" download>⬇ Download PDF</a>
+    </div>
+
+    <header class="resume-header">
+      <div class="resume-title">
+        <h1>Paul Pham</h1>
+        <small class="tagline">B.A. Criminology Major — University of Minnesota Duluth</small>
+      </div>
+      <address class="resume-contact">
+        <div><a href="tel:+16513545139">(651) 354‑5139</a></div>
+        <div><a href="mailto:Paulpham.2001@gmail.com">Paulpham.2001@gmail.com</a></div>
+      </address>
+    </header>
+
+    <section class="resume-section">
+      <h2>Education</h2>
+      <div class="item">
+        <div class="item-head"><span class="role">University of Minnesota Duluth</span><span class="meta">Oct. 2026</span></div>
+        <div class="org">Bachelor of Arts — Major: Criminology</div>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2>Relevant Coursework</h2>
+      <p>
+        <span class="tag">Sociology of Criminal Law</span>
+        <span class="tag">Criminological Theory</span>
+        <span class="tag">Race and Ethnic Relations</span>
+      </p>
+    </section>
+
+    <section class="resume-section" style="grid-column:1/-1">
+      <h2>Experience</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="role">Server &amp; Host (Fluent in Vietnamese)</span>
+          <span class="meta">Mar. 2021 – Present</span>
+        </div>
+        <div class="org">Phởholic — Duluth, MN</div>
+        <ul class="bullets">
+          <li>Provide excellent customer service; take orders efficiently and accommodate special dietary requests.</li>
+          <li>Self‑sufficient service of meals and beverages with timeliness and accuracy.</li>
+          <li>Multitask across several tables during high‑volume shifts while maintaining quality attention.</li>
+          <li>Collaborate closely with kitchen staff to communicate modifications and resolve concerns.</li>
+          <li>Manage reservations via phone and in‑person using a booking system to minimize wait times.</li>
+          <li>Maintain waitlists and track arrivals/seating to optimize flow during peak hours.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="role">Wheeled Vehicle Mechanic (91B) — Sergeant (E‑5)</span>
+          <span class="meta">Jan. 2019 – Present</span>
+        </div>
+        <div class="org">Army National Guard — 134th BSB, Delta Co., Chisholm, MN</div>
+        <ul class="bullets">
+          <li>Performed pre‑mission checks on HMMWVs; supported local law enforcement during 2021 Brooklyn Center civil unrest.</li>
+          <li>Led monthly and annual diagnostics with a team; troubleshoot and repair HMMWV, JLTV, LMTV, and more.</li>
+          <li>Completed numerous inspections independently with no supervision.</li>
+          <li>Trained Soldiers on hazardous materials handling and PPE usage.</li>
+          <li>Awarded <em>Army Achievement Medal</em> at MOS School (Fort Lee, VA) for 100% across all mechanic exams.</li>
+          <li>Received <em>Certificate of Achievement</em> for outstanding physical fitness at BCT (Fort Jackson, SC) with APFT score 313/300.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="resume-section" style="grid-column:1/-1">
+      <h2>Involvement</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="role">Marine Corps Junior Reserve Officer Training Corps (MCJROTC)</span>
+          <span class="meta">High School</span>
+        </div>
+        <ul class="bullets">
+          <li>Completed numerous volunteer activities, including sanitation work at the Minnesota State Fair.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><span class="role">PT Team Captain</span></div>
+        <ul class="bullets">
+          <li>Led ~40 cadets in physical training; coached proper lifting and nutrition for weight gain/loss goals.</li>
+          <li>Organized conditioning for inter‑school fitness competitions.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><span class="role">Orienteering Captain</span></div>
+        <ul class="bullets">
+          <li>Taught classes of ~20 cadets on compass use, terrain features, and safe land navigation.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Paul Pham. All rights reserved.</p>
+  </footer>
+</body>
+</html>

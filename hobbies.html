@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/redbulllogo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Hobbies</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <nav>
+    <ul>
+            <li><a href="index.html">Welcome</a></li>
+      <li><a href="hobbies.html" aria-current="page">Hobbies</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="career.html">Career</a></li>
+      <li><a href="game.html">Clanker Crushers</a></li>
+    </ul>
+  </nav>
+
+  <h1>My Hobby</h1>
+
+    <!-- Background Music -->
+    <div class="audio-player">
+      <audio id="bg-music" autoplay loop>
+        <source src="audio/HAARPER - BORN FROM THE DIRT (Official Music Video).mp3" type="audio/mpeg" />
+      </audio>
+
+      <div class="volume-wrap">
+        <label for="music-volume">Music Volume</label>
+        <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.50" />
+        <button id="music-mute" type="button" aria-label="Mute/Unmute">Mute</button>
+      </div>
+      <p> <strong> My Favorite Gym Song: HAARPER - "BORN FROM THE DIRT"</strong></p>
+    </div>
+    
+
+  <main>
+    <!-- Top: Achievements (left) + Video slideshow (right) -->
+    <section class="hobbies-hero">
+      <div class="achievements card">
+        <h2>Athletic Achievements</h2>
+
+        <p class="achievements-caption">
+          I started this fitness journey at <strong>166 lbs</strong> with basically no muscle. I cut weight, shipped to
+          <strong>Basic Combat Training (BCT)</strong>, and when I returned I bulked and committed to training
+          consistently since <strong>August 2018</strong>. At BCT I finished <strong>top of my company</strong> on the
+          Army Physical Fitness Test (APFT). Since then I’ve kept the momentum—building strength, discipline, and
+          consistency. I’m now <strong>146 lbs</strong>, training <strong>6 days a week</strong>, and proud of how far I’ve come.
+        </p>
+
+        <h3 class="achievements-subtitle">APFT (BCT) Highlights</h3>
+        <ul class="apft-stats">
+          <li><strong>Push-ups:</strong> 79</li>
+          <li><strong>Sit-ups:</strong> 81</li>
+          <li><strong>2-mile run:</strong> 12:48</li>
+          <li><strong>Total:</strong> 313/300 points (extended scale)</li>
+        </ul>
+
+        <h3 class="achievements-subtitle">Current Lifts</h3>
+        <ul class="apft-stats">
+          <li><strong>Bench:</strong> 225 lbs x 1 (Not actively working on this)</li>
+          <li><strong>Squat:</strong> 225 lbs x 5</li>
+          <li><strong>Deadlift:</strong> 300 lbs x 1</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="slideshow" data-slideshow="top">
+          <div class="slides">
+            <figure class="slide is-active">
+              <video autoplay muted playsinline preload="metadata">
+                <source src="videos/deadlift285.mp4" type="video/mp4" />
+              </video>
+              <p><strong>Deadlifting 285 lbs</strong></p>
+            </figure>
+            <figure class="slide">
+              <video autoplay muted playsinline preload="metadata">
+                <source src="videos/deadlift300.mp4" type="video/mp4" />
+              </video>
+              <p><strong>Deadlifting 300 lbs</strong></p>
+            </figure>
+            <figure class="slide">
+              <video autoplay muted playsinline preload="metadata">
+                <source src="videos/squat225.mp4" type="video/mp4" />
+              </video>
+              <p><strong>Squatting 225 for 5 reps</strong></p>
+            </figure>
+          </div>
+
+          <button class="nav prev" aria-label="Previous">‹</button>
+          <button class="nav next" aria-label="Next">›</button>
+          <div class="dots" aria-label="Slide pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Photos Section -->
+    <section class="progress-section">
+      <div class="card">
+        <h2>Progress Photos</h2>
+        <p class="progress-caption">
+          These photos show my transformation from August, 2018 to September, 2025. The journey has been challenging but rewarding, and I'm proud of the discipline and consistency I've maintained to achieve these results.
+        </p>
+
+        <div class="slideshow" data-slideshow="progress" data-autoplay="false">
+          <div class="slides">
+            <figure class="slide is-active">
+              <img src="images/sysiphus.jpeg" alt="Sysiphus" />
+              <p>Milestone Slideshow</p>
+            </figure>
+            <figure class="slide">
+              <img src="images/beginning.jpeg" alt="Beginning" />
+              <p>August, 2018 Pre-Enlistment 166lbs (16 Years Old)</p>
+            </figure>
+            <figure class="slide">
+              <img src="images/middle.jpeg" alt="After a few years" />
+              <p>August, 2023 5 years later (21 Years Old)</p>
+            </figure>
+            <figure class="slide">
+              <img src="images/end.jpeg" alt="Current physique" />
+              <p>September, 2025, maintaining weight for now. (23 Years Old)</p>
+            </figure>
+          </div>
+
+          <button class="nav prev" aria-label="Previous photo">‹</button>
+          <button class="nav next" aria-label="Next photo">›</button>
+          <div class="dots" aria-label="Slide pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom: Gym photos with caption -->
+    <section class="gym-section">
+      <div class="card inner">
+        <h2 class="gym-title">Los Campeones – The Best Gym in Town</h2>
+        <p class="gym-caption"><strong>This is where I workout currently.</strong></p>
+
+        <div class="slideshow" data-slideshow="gym">
+          <div class="slides">
+            <figure class="slide is-active">
+              <img src="images/los3.JPG" alt="Los Campeones graffiti" />
+            </figure>
+            <figure class="slide">
+              <img src="images/los2.jpeg" alt="Jason's Corner" />
+            </figure>
+            <figure class="slide">
+              <img src="images/los1.jpeg" alt="New Addition" />
+            </figure>
+          </div>
+
+          <button class="nav prev" aria-label="Previous slide">‹</button>
+          <button class="nav next" aria-label="Next slide">›</button>
+          <div class="dots" aria-label="Slide pagination"></div>
+        </div>
+  </main>
+  <link rel="stylesheet" href="css/style.css?v=4">
+
+  <footer>
+    <p>&copy; 2025 Paul Pham. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

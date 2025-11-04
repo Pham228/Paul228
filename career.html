@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Plan — Roseville PD & Saint Paul PD</title>
+  <link rel="icon" type="image/png" href="images/redbulllogo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Lean, tidy, and consistent layout -->
+  <style>
+    :root{
+      --wrap-max: 1040px;
+      --gap-lg: 1.25rem;
+      --gap-md: .85rem;
+      --gap-sm: .5rem;
+      --card-bg: rgba(255,255,255,.06);
+      --card-br: rgba(255,255,255,.14);
+      --muted: rgba(255,255,255,.8);
+    }
+
+    .wrap{max-width:var(--wrap-max);margin:2rem auto;padding:0 1rem}
+
+    /* Header */
+    .page-head{display:grid;gap:.5rem;margin-bottom:var(--gap-lg)}
+    .page-head h1{line-height:1.1}
+    .page-sub{opacity:.9;max-width:70ch}
+
+    /* Two neat columns, stack on mobile */
+    .cols{display:grid;gap:var(--gap-lg)}
+    @media(min-width:900px){.cols{grid-template-columns:1fr 1fr}}
+
+    /* Cards */
+    .card{border:1px solid var(--card-br);background:var(--card-bg);border-radius:1rem;padding:1rem}
+    .card h2{margin:0 0 .35rem 0;font-size:1.15rem}
+    .card p{margin:.25rem 0}
+    .meta{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin-top:.35rem}
+    .badge{border:1px solid var(--card-br);padding:.15rem .5rem;border-radius:.45rem;font-size:.85rem}
+
+    /* Form blocks kept compact */
+    .form{display:grid;gap:var(--gap-sm);margin-top:.6rem}
+    .row{display:grid;gap:.5rem}
+    @media(min-width:640px){.row{grid-template-columns:1fr 1fr}}
+    label{font-weight:600;font-size:.95rem}
+    input, textarea{width:100%;border:1px solid var(--card-br);background:rgba(0,0,0,.2);border-radius:.6rem;padding:.55rem;color:inherit}
+    textarea{min-height:110px;resize:vertical}
+    .hint{font-size:.9rem;opacity:.8}
+
+    /* Native details/summary reduces visual clutter */
+    details{border-top:1px dashed var(--card-br);margin-top:.6rem;padding-top:.6rem}
+    details summary{cursor:pointer;opacity:.95}
+    details ul{margin:.4rem 0 0 1rem}
+
+    /* CTA buttons */
+    .cta{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem}
+    .btn{appearance:none;border:1px solid var(--card-br);background:var(--card-bg);padding:.48rem .85rem;border-radius:.7rem;color:inherit;text-decoration:none;font-weight:600}
+
+    /* Fit section trimmed to essentials */
+    .fit{border:1px solid var(--card-br);background:var(--card-bg);border-radius:1rem;padding:1rem;margin-top:var(--gap-lg)}
+    .fit h3{margin:0 0 .35rem 0}
+    .fit ul{margin:.35rem 0 0 1rem}
+
+    /* Personal notes */
+    .notes{border:1px solid var(--card-br);background:var(--card-bg);border-radius:1rem;padding:1rem;margin-top:var(--gap-lg)}
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="career.html" aria-current="page">Career</a></li>
+      <li><a href="game.html">Clanker Crushers</a></li>
+    </ul>
+  </nav>
+
+  <main class="wrap">
+    <header class="page-head">
+      <h1>My Career Plans</h1>
+      <p style="text-align: center;">I chose these departments because they are close to where I grew up. It would be an easy commute and provide long‑term stability in the Twin Cities: <br><strong>Roseville PD</strong> and <strong>Saint Paul PD</strong>.</p>
+    </header>
+
+    <section class="cols">
+      <!-- Roseville PD -->
+      <article class="card">
+        <h2>Roseville Police Department</h2>
+        <p class="muted">Concise fit: community rapport, bilingual (Vietnamese/English), disciplined team player from the Guard, solid fitness and calm under pressure.</p>
+        <div class="meta">
+          <span class="badge">Community‑oriented</span>
+          <span class="badge">Bilingual</span>
+          <span class="badge">Army Guard 91B</span>
+          <span class="badge">UMD Criminology</span>
+        </div>
+
+        <div class="form">
+          <div class="row">
+            <div>
+              <label for="r-name">Recruiting contact</label>
+              <input id="r-name" placeholder="Name & title" />
+            </div>
+            <div>
+              <label for="r-phone">Phone</label>
+              <input id="r-phone" placeholder="(XXX) XXX‑XXXX" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="r-email">Email</label>
+              <input id="r-email" placeholder="recruiting@rosevillemn.gov" />
+            </div>
+            <div>
+              <label for="r-address">Address</label>
+              <input id="r-address" placeholder="Street, Roseville, MN ZIP" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="r-portal">Application portal URL</label>
+              <input id="r-portal" placeholder="https://..." />
+            </div>
+            <div>
+              <label for="r-ride">Ride‑along sign‑up URL</label>
+              <input id="r-ride" placeholder="https://..." />
+            </div>
+          </div>
+          <label for="r-notes">Notes</label>
+          <textarea id="r-notes" placeholder="Academy timeline, physical standards, background investigator, pay steps, lateral options…"></textarea>
+        </div>
+
+        <details>
+          <summary>Prompts to gather (optional)</summary>
+          <ul>
+            <li>Recruiting phone & email; recruiter/sergeant name</li>
+            <li>HQ address & mailing address</li>
+            <li>Application portal; ride‑along process</li>
+            <li>Hiring timeline; academy dates; physical standards</li>
+            <li>Pay/steps; incentives; lateral/tuition programs</li>
+            <li>Background packet & point‑of‑contact</li>
+          </ul>
+        </details>
+
+        <div class="cta">
+          <a class="btn" href="#" onclick="alert('Add the official application link here.');return false;">Apply</a>
+          <a class="btn" href="#" onclick="alert('Add the ride‑along link here.');return false;">Ride‑Along</a>
+        </div>
+      </article>
+
+      <!-- Saint Paul PD -->
+      <article class="card">
+        <h2>Saint Paul Police Department</h2>
+        <p class="muted">Concise fit: ready for urban call volume, skilled at de‑escalation from hospitality, leadership from MCJROTC & Guard, and bilingual community outreach.</p>
+        <div class="meta">
+          <span class="badge">Urban service</span>
+          <span class="badge">De‑escalation</span>
+          <span class="badge">Leadership</span>
+          <span class="badge">Bilingual</span>
+        </div>
+
+        <div class="form">
+          <div class="row">
+            <div>
+              <label for="s-name">Recruiting contact</label>
+              <input id="s-name" placeholder="Name & title" />
+            </div>
+            <div>
+              <label for="s-phone">Phone</label>
+              <input id="s-phone" placeholder="(XXX) XXX‑XXXX" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="s-email">Email</label>
+              <input id="s-email" placeholder="recruiting@ci.stpaul.mn.us" />
+            </div>
+            <div>
+              <label for="s-address">Address</label>
+              <input id="s-address" placeholder="Street, Saint Paul, MN ZIP" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="s-portal">Application portal URL</label>
+              <input id="s-portal" placeholder="https://..." />
+            </div>
+            <div>
+              <label for="s-ride">Ride‑along sign‑up URL</label>
+              <input id="s-ride" placeholder="https://..." />
+            </div>
+          </div>
+          <label for="s-notes">Notes</label>
+          <textarea id="s-notes" placeholder="Hiring timeline, FTO structure, specialty units, community engagement programs…"></textarea>
+        </div>
+
+        <details>
+          <summary>Prompts to gather (optional)</summary>
+          <ul>
+            <li>Recruiting phone & email; recruiter/sergeant name</li>
+            <li>HQ address & mailing address</li>
+            <li>Application portal; ride‑along process</li>
+            <li>Hiring timeline; academy dates; physical standards</li>
+            <li>FTO structure; specialty units of interest</li>
+            <li>Community engagement programs</li>
+          </ul>
+        </details>
+
+        <div class="cta">
+          <a class="btn" href="#" onclick="alert('Add the official application link here.');return false;">Apply</a>
+          <a class="btn" href="#" onclick="alert('Add the ride‑along link here.');return false;">Ride‑Along</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="fit">
+      <h3>Why I'm a Strong Fit</h3>
+      <ul>
+        <li><strong>Local roots & longevity:</strong> Grew up near the Twin Cities; plan to reside in the metro long‑term for continuity with neighborhoods and community partners.</li>
+        <li><strong>UMD Criminology:</strong> Academic grounding in criminal law, theory, and community dynamics—useful for writing clear reports and applying evidence‑based approaches.</li>
+        <li><strong>Army National Guard (91B), Specialist (E‑4):</strong> Discipline, chain‑of‑command, safety with hazardous materials, and mission‑ready reliability; awards include an Army Achievement Medal and a fitness Certificate of Achievement.</li>
+        <li><strong>De‑escalation & communication:</strong> Bilingual (Vietnamese/English) and years in hospitality sharpened calm, respectful engagement with diverse residents.</li>
+        <li><strong>Fitness & resilience:</strong> High physical performance and comfort with high‑tempo, team‑based work.</li>
+        <li><strong>Hands‑on problem solving:</strong> Mechanical troubleshooting translates to methodical assessments, attention to detail, and equipment care.</li>
+      </ul>
+    </section>
+
+    <section class="notes">
+      <h2>Personal Notes</h2>
+      <textarea placeholder="Follow‑ups: ride‑along scheduling, academy start dates, background packet checklist, fitness test dates, references…"></textarea>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Paul Pham. All rights reserved.</p>
+  </footer>
+</body>
+</html>
